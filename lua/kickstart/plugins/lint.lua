@@ -8,6 +8,8 @@ return {
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
       }
+      -- C: Ignores errors if linter isn't available
+      lint.try_lint(nil, { ignore_errors = true })
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
       -- instead set linters_by_ft like this:
